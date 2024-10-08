@@ -1,0 +1,21 @@
+title: Test1.yml
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    DestinationHostname|endswith:
+    - prod.addigy.com
+    - grtmprod.addigy.com
+    - agents.addigy.com
+  condition: selection
+id: 3d378967-3f79-4830-a1ea-ed0db6f55777
+status: experimental
+description: Detects potential network activity of Addigy RMM tool
+author: LOLRMM Project
+tags:
+- attack.execution
+- attack.t1219
+falsepositives:
+- Legitimate use of Addigy
+level: medium
